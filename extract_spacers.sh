@@ -19,11 +19,15 @@ sed -i '1d' op2.txt ; sed -i '$d' op2.txt
 end=$(wc -l op2.txt | cut -d ' ' -f 1)
 end=$((end/2))
 echo $end
-yes "chr1" | head -n $end > col1.txt
+
+yes "NODE_1_length_922990_cov_42.400140" | head -n $end > col1.txt
 cat op2.txt | paste col1.txt - - > spacer.bed
 #head spacer.bed
 awk '{$2=$2+1 ; $3=$3-1 ; print $0}' OFS='\t' spacer.bed
 #head spacer.bed
 
+seqtk subseq $2 spacer.bed > $3
+
 # Count the number of lines in output file to obtain number of perfect matches
-#wc -l $3 
+wc -l $3 
+cat $3
