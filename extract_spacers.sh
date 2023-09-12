@@ -12,5 +12,17 @@ cut -f 9,10 op.txt > op1.txt
 sed 's/\t/\n/g' op1.txt > op2.txt
 cat op2.txt
 
+#awk 'BEGIN for(i = 1; i< NR; i++){print $1} END' op2.txt
+
+#while IFS= read -r line; do
+  # Use space as the delimiter to split the line into two columns
+  #column1=$(echo "$line" | cut -d" " -f1)
+  #column2=$(echo "$line" | cut -d" " -f2)
+  
+  # Print the two columns (you can modify this as needed)
+  #echo "Column 1: $column1"
+  #echo "Column 2: $column2"
+#done < op2.txt
+
 # Count the number of lines in output file to obtain number of perfect matches
 #wc -l $3 
