@@ -21,9 +21,9 @@ end=$((end/2))
 echo $end
 yes "chr1" | head -n $end > col1.txt
 cat op2.txt | paste col1.txt - - > spacer.bed
-head spacer.bed
-
-
+#head spacer.bed
+awk '{$2=$2+1 ; $3=$3-1 ; print $0}' OFS='\t' spacer.bed
+#head spacer.bed
 
 # Count the number of lines in output file to obtain number of perfect matches
 #wc -l $3 
