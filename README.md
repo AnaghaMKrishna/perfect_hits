@@ -1,2 +1,2 @@
 # perfect_hits
-My first GitHub repo! Created for BIOL7200 assignment3.
+Check for perfect matches of CRISPR sequences in two strains of Psuedomonas aeruginosa
