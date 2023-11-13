@@ -1,2 +1,2 @@
 # perfect_hits
-My first GitHub repo! Created for BIOL7200 assignment3.
+Extracts the spacers in between the CRISPR repeats using BLAST and seqtk
